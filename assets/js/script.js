@@ -1,5 +1,6 @@
+//CONSTANT FOR OUR BUTTON
 const button = document.querySelector("button");
-
+//OUR ADVENTLISTENENER FOR PERMISSION TO LOCATE USER
 button.addEventListener("click", ()=>{
     if(navigator.geolocation){
         button.innerText = "Allow to detect location";
@@ -8,7 +9,7 @@ button.addEventListener("click", ()=>{
         button.innerText = "Your browser does not support";
     }
 });
-
+//FUNCTION FOR DETECTING LOCATIONG - BY USING FETCH WITH AN OPEN API AND A APIKEY CAN WE FIND LONGITUDE AND ALTITUDE + MORE INFO AS CITY, NUMBER AND MORE
 function onSuccess(position){
     button.innerText = "Detecting your location...";
     let {latitude, longitude} = position.coords;
@@ -16,13 +17,14 @@ function onSuccess(position){
     .then(response => response.json()).then(response =>{
         let allDetails = response.results[0].components;
         console.table(allDetails);
+//HERE CAN BE ADDED MORE INFO THAT NEEDS TO BE DISPLAYED WHICH IS SHOWN IN THE CONSOLE LOG
         let {road, house_number, postal_city, postcode, country} = allDetails;
         button.innerText = `${road} ${house_number}, ${postal_city}, ${postcode}, ${country}`;
     }).catch(()=>{
         button.innerText = "Something went wrong";
     });
 }
-
+//IF AN ERROR ACCOUR - THIS MESSAGE WILL POP UP
 function onError(error){
     if(error.code == 1){
         button.innerText = "You denied the request";
