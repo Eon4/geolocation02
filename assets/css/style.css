@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -32,4 +32,5 @@ body{
 h1{
   font-family: 'Courier New', Courier, monospace;
   color: aqua;
+  display: block;
 }
