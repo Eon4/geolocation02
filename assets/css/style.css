@@ -12,11 +12,11 @@ body{
   min-height: 100vh;
   background-color: rgb(91, 91, 112);
 }
-/* ::selection{
+::selection{
   color: #fff;
   background: #5372F0;
-} */
-/* button{
+} 
+  button{
   border: none;
   outline: none;
   font-size: 50px;
@@ -27,7 +27,7 @@ body{
   font-weight: 500;
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
-} */
+}
 
 h1{
   font-family: 'Courier New', Courier, monospace;
