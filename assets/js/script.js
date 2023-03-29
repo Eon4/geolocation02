@@ -5,7 +5,7 @@ button.addEventListener("click", ()=>{
         button.innerText = "Allow to detect location";
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }else{
-        button.innerText = "Your browser not support";
+        button.innerText = "Your browser does not support";
     }
 });
 
