@@ -6,7 +6,7 @@ button.addEventListener("click", ()=>{
         button.innerText = "Allow to detect location";
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }else{
-        button.innerText = "Your browser does not support";
+        button.innerText = "Your browser does not support this";
     }
 });
 //FUNCTION FOR DETECTING LOCATIONG - BY USING FETCH WITH AN OPEN API AND A APIKEY CAN WE FIND LONGITUDE AND ALTITUDE + MORE INFO AS CITY, NUMBER AND MORE
