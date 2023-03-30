@@ -1,6 +1,6 @@
 //CONSTANT FOR OUR BUTTON
 const button = document.querySelector("button");
-//OUR ADVENTLISTENENER FOR PERMISSION TO LOCATE USER
+//OUR ADVENTLISTENER FOR PERMISSION TO LOCATE USER
 button.addEventListener("click", ()=>{
     if(navigator.geolocation){
         button.innerText = "Allow to detect location";
@@ -24,7 +24,7 @@ function onSuccess(position){
         button.innerText = "Something went wrong";
     });
 }
-//IF AN ERROR ACCOUR - THIS MESSAGE WILL POP UP
+//IF AN ERROR ACCOUR - EACH OF THESE MESSAGES WILL POP UP
 function onError(error){
     if(error.code == 1){
         button.innerText = "You denied the request";
